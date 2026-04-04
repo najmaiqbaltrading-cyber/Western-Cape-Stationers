@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Western Cape Stationers – Your Paper Supply Destination</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d2340;--navy-dark:#071628;--navy-mid:#163354;--navy-light:#1e4a7a;
+  --navy-pale:#e8eef6;--white:#ffffff;--off-white:#f5f8fc;--light:#eaf0f8;
+  --border:rgba(13,35,64,.12);--text-dark:#0d2340;--text-body:#374a60;--text-muted:#7a8fa6;
+  --shadow-sm:0 2px 8px rgba(13,35,64,.08);--shadow-md:0 8px 28px rgba(13,35,64,.13);
+  --shadow-lg:0 20px 56px rgba(13,35,64,.18);--shadow-xl:0 32px 80px rgba(13,35,64,.24);
+  --radius:10px;--radius-lg:18px;--tr:all .25s cubic-bezier(.16,1,.3,1);
+  --font-h:'DM Serif Display',Georgia,serif;--font-b:'Plus Jakarta Sans',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);color:var(--text-body);background:var(--white);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--font-b);cursor:pointer;border:none}
+ul{list-style:none}
+h1,h2,h3,h4{font-family:var(--font-h);color:var(--text-dark);line-height:1.15}
+p{line-height:1.72}
+
+/* Layout */
+.container{max-width:1220px;margin:0 auto;padding:0 24px}
+.section{padding:96px 0}
+.off-white-bg{background:var(--off-white)}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:var(--radius);font-size:.875rem;font-weight:700;letter-spacing:-.01em;transition:var(--tr);cursor:pointer;border:none;white-space:nowrap}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-mid);transform:translateY(-2px);box-shadow:0 10px 28px rgba(13,35,64,.3)}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{background:var(--navy-pale);transform:translateY(-2px);box-shadow:0 8px 20px rgba(13,35,64,.18)}
+.btn-outline-white{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55)}
+.btn-outline-white:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.btn-outline-navy{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+.btn-outline-navy:hover{background:var(--navy);color:#fff}
+.btn-sm{padding:9px 18px;font-size:.8rem}
+.btn-wa{background:#25d366;color:#fff}
+.btn-wa:hover{background:#1dba58;transform:translateY(-2px);box-shadow:0 8px 20px rgba(37,211,102,.35)}
+
+/* Navbar */
+#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08);transition:var(--tr)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+.nav-logo{display:flex;flex-direction:column;gap:2px;cursor:pointer}
+.nav-logo-name{font-family:var(--font-h);font-size:1.15rem;color:#fff;line-height:1}
+.nav-logo-tag{font-size:.6rem;color:rgba(255,255,255,.5);letter-spacing:.06em;font-weight:600;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-link{color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;padding:8px 14px;border-radius:var(--radius);transition:var(--tr);cursor:pointer;background:none;border:none}
+.nav-link:hover,.nav-link.active{color:#fff;background:rgba(255,255,255,.1)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.cart-btn{position:relative;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;width:42px;height:42px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--tr);font-size:1rem}
+.cart-btn:hover{background:rgba(255,255,255,.18)}
+.cart-badge{position:absolute;top:-6px;right:-6px;background:#fff;color:var(--navy);width:19px;height:19px;border-radius:50%;font-size:.63rem;font-weight:800;display:none;align-items:center;justify-content:center}
+.cart-badge.show{display:flex}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;color:#fff;cursor:pointer;padding:6px}
+.hamburger span{display:block;width:22px;height:2px;background:currentColor;border-radius:2px;transition:var(--tr)}
+.mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;bottom:0;background:var(--navy-dark);z-index:999;flex-direction:column;padding:28px 24px;gap:6px;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-link{color:rgba(255,255,255,.8);font-size:1rem;font-weight:600;padding:14px 16px;border-radius:var(--radius);transition:var(--tr);cursor:pointer;border-bottom:1px solid rgba(255,255,255,.07);background:none;text-align:left;border-left:none;border-right:none;border-top:none}
+.mobile-link:hover{color:#fff;background:rgba(255,255,255,.08)}
+.mobile-actions{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+
+/* Section labels */
+.section-tag{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--navy-light);margin-bottom:14px}
+.section-tag::before{content:'';display:block;width:20px;height:2px;background:var(--navy-light);border-radius:2px}
+.section-tag-light{color:rgba(255,255,255,.45)}
+.section-tag-light::before{background:rgba(255,255,255,.35)}
+
+/* Hero */
+#home{min-height:100vh;background:var(--navy);position:relative;display:flex;align-items:center;overflow:hidden;padding-top:70px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 80% 20%,rgba(30,74,122,.7) 0%,transparent 70%),radial-gradient(ellipse 50% 50% at 10% 80%,rgba(7,22,40,.8) 0%,transparent 60%),linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 50%,var(--navy-mid) 100%);z-index:0}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;z-index:1}
+.hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:80px 0}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.9);padding:6px 14px;border-radius:100px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:28px}
+.hero-h1{font-size:clamp(2.4rem,4.5vw,3.8rem);color:#fff;margin-bottom:20px;line-height:1.1}
+.hero-h1 em{font-style:italic;color:rgba(255,255,255,.7)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.62);max-width:460px;margin-bottom:36px;line-height:1.75}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:52px}
+.hero-stats{display:flex;gap:36px}
+.hero-stat-num{font-family:var(--font-h);font-size:1.9rem;color:#fff;line-height:1}
+.hero-stat-label{font-size:.73rem;color:rgba(255,255,255,.48);margin-top:4px;letter-spacing:.04em}
+.hero-right{display:flex;flex-direction:column;gap:14px}
+.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);border-radius:var(--radius-lg);padding:26px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:var(--tr);cursor:pointer}
+.hero-card:hover{background:rgba(255,255,255,.11);transform:translateX(4px)}
+.hero-card-top{display:flex;align-items:center;gap:13px;margin-bottom:9px}
+.hero-card-icon{width:42px;height:42px;background:rgba(255,255,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.hero-card-name{font-family:var(--font-h);color:#fff;font-size:1rem}
+.hero-card-desc{font-size:.8rem;color:rgba(255,255,255,.52);line-height:1.6}
+.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.45);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;z-index:2}
+.scroll-line{width:2px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent);border-radius:2px;animation:scrollAnim 1.8s ease-in-out infinite}
+@keyframes scrollAnim{0%,100%{opacity:.5;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.15)}}
+
+/* Trust strip */
+.trust-strip{background:var(--off-white);border-bottom:1px solid var(--border);padding:18px 0}
+.trust-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:9px;font-size:.8rem;font-weight:600;color:var(--navy);opacity:.78}
+.trust-sep{width:1px;height:22px;background:var(--border);flex-shrink:0}
+
+/* Featured / product cards */
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(256px,1fr));gap:22px;margin-top:46px}
+.prod-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--tr);display:flex;flex-direction:column}
+.prod-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:rgba(13,35,64,.22)}
+.prod-thumb{width:100%;height:196px;background:linear-gradient(135deg,var(--light) 0%,var(--navy-pale) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--text-muted);font-size:.75rem;font-weight:600;position:relative;cursor:pointer;overflow:hidden}
+.prod-thumb::before{content:'';position:absolute;bottom:-20px;right:-20px;width:80px;height:80px;background:rgba(13,35,64,.05);border-radius:50%}
+.prod-thumb::after{content:'';position:absolute;top:-14px;left:-14px;width:60px;height:60px;background:rgba(13,35,64,.04);border-radius:50%}
+.prod-thumb span.em{font-size:3rem;position:relative;z-index:1;filter:drop-shadow(0 2px 8px rgba(13,35,64,.15))}
+.prod-thumb .hint{font-size:.67rem;opacity:.55;position:relative;z-index:1;background:rgba(255,255,255,.7);padding:3px 10px;border-radius:100px}
+.new-badge{position:absolute;top:12px;left:12px;background:var(--navy);color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border-radius:4px}
+.prod-body{padding:18px;flex:1;display:flex;flex-direction:column}
+.prod-cat{font-size:.67rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--navy-light);margin-bottom:6px}
+.prod-name{font-family:var(--font-h);font-size:1.05rem;color:var(--text-dark);margin-bottom:7px;line-height:1.25;cursor:pointer}
+.prod-name:hover{color:var(--navy-light)}
+.prod-desc{font-size:.8rem;color:var(--text-muted);line-height:1.62;margin-bottom:14px;flex:1}
+.prod-actions{display:flex;gap:8px}
+.prod-actions .btn{flex:1;justify-content:center;padding:9px 12px;font-size:.78rem}
+
+/* Why choose us */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px;margin-top:48px}
+.why-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:30px 26px;transition:var(--tr)}
+.why-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--navy)}
+.why-icon{width:52px;height:52px;background:var(--navy);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.35rem;margin-bottom:18px}
+.why-title{font-family:var(--font-h);font-size:1.08rem;color:var(--text-dark);margin-bottom:9px}
+.why-desc{font-size:.83rem;color:var(--text-muted);line-height:1.65}
+
+/* Credentials */
+.cred-section{background:var(--navy);padding:80px 0;position:relative;overflow:hidden}
+.cred-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 10% 50%,var(--navy-mid),transparent);pointer-events:none}
+.cred-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
+.cred-left h2{color:#fff;margin-bottom:18px}
+.cred-left p{color:rgba(255,255,255,.62);font-size:.93rem;max-width:440px;line-height:1.75;margin-bottom:28px}
+.cred-badges{display:flex;gap:14px;flex-wrap:wrap}
+.cred-badge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:14px 18px;display:flex;align-items:center;gap:11px}
+.cred-badge-icon{font-size:1.5rem}
+.cred-badge-title{font-size:.68rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:3px}
+.cred-badge-text{font-size:.82rem;font-weight:600;color:rgba(255,255,255,.82);line-height:1.4}
+.cred-right{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cred-stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);padding:26px 22px;text-align:center}
+.cred-stat-num{font-family:var(--font-h);font-size:2.3rem;color:#fff;line-height:1;margin-bottom:7px}
+.cred-stat-label{font-size:.78rem;color:rgba(255,255,255,.48);line-height:1.55}
+
+/* Catalogue page */
+#catalogue{padding-top:100px;min-height:100vh}
+.cat-header{background:var(--navy);padding:54px 0 46px}
+.cat-header h1{color:#fff;margin-bottom:11px}
+.cat-header p{color:rgba(255,255,255,.58);max-width:520px}
+.cat-toolbar{background:var(--white);border-bottom:1px solid var(--border);padding:18px 0;position:sticky;top:70px;z-index:50;box-shadow:var(--shadow-sm)}
+.cat-toolbar-inner{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.search-wrap{display:flex;align-items:center;gap:9px;background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);padding:10px 15px;flex:1;min-width:180px;transition:var(--tr)}
+.search-wrap:focus-within{border-color:var(--navy);box-shadow:0 0 0 3px rgba(13,35,64,.08)}
+.search-wrap svg{width:15px;height:15px;color:var(--text-muted);flex-shrink:0}
+.search-wrap input{background:none;border:none;outline:none;font-family:var(--font-b);font-size:.875rem;color:var(--text-dark);width:100%}
+.search-wrap input::placeholder{color:var(--text-muted)}
+.filter-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.ftab{padding:8px 15px;border-radius:100px;font-size:.76rem;font-weight:700;border:1.5px solid var(--border);color:var(--text-muted);background:var(--white);cursor:pointer;transition:var(--tr)}
+.ftab:hover{border-color:var(--navy);color:var(--navy)}
+.ftab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.cat-count{font-size:.78rem;color:var(--text-muted);white-space:nowrap;margin-left:auto}
+.cat-body{padding:44px 0 90px}
+.no-results{grid-column:1/-1;text-align:center;padding:80px 20px;color:var(--text-muted)}
+.no-results p{margin-top:12px;font-size:.9rem}
+
+/* Product modal */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(7,22,40,.72);z-index:2000;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+.modal-overlay.open{display:flex}
+.modal-wrap{position:relative;max-width:680px;width:100%}
+.modal{background:#fff;border-radius:var(--radius-lg);max-height:90vh;overflow-y:auto;box-shadow:var(--shadow-xl)}
+.modal-thumb{width:100%;height:270px;background:linear-gradient(135deg,var(--light),var(--navy-pale));display:flex;align-items:center;justify-content:center;font-size:5rem;border-radius:var(--radius-lg) var(--radius-lg) 0 0;flex-shrink:0;overflow:hidden;position:relative}
+.modal-thumb::before{content:'';position:absolute;bottom:-30px;right:-30px;width:140px;height:140px;background:rgba(13,35,64,.06);border-radius:50%}
+.modal-body{padding:30px}
+.modal-cat{font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--navy-light);margin-bottom:9px}
+.modal-title{font-family:var(--font-h);font-size:1.75rem;color:var(--text-dark);margin-bottom:13px}
+.modal-desc{font-size:.9rem;color:var(--text-muted);line-height:1.75;margin-bottom:22px}
+.modal-specs{background:var(--off-white);border-radius:var(--radius);padding:18px;margin-bottom:22px}
+.modal-specs h4{font-size:.74rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--text-dark);margin-bottom:12px}
+.spec-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:.84rem}
+.spec-row:last-child{border-bottom:none}
+.spec-key{color:var(--text-muted);font-weight:500}
+.spec-val{color:var(--text-dark);font-weight:600;text-align:right}
+.modal-actions{display:flex;gap:10px;flex-wrap:wrap}
+.modal-actions .btn{flex:1;justify-content:center;min-width:140px}
+.modal-back{display:flex;align-items:center;gap:6px;background:none;border:none;color:var(--text-muted);font-family:var(--font-b);font-size:.82rem;font-weight:600;cursor:pointer;padding:0;margin-bottom:20px;transition:var(--tr)}
+.modal-back:hover{color:var(--navy)}
+.modal-close{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.92);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--navy);box-shadow:var(--shadow-sm);transition:var(--tr);z-index:1}
+.modal-close:hover{background:#fff;box-shadow:var(--shadow-md)}
+
+/* Enquiry drawer */
+.drawer-overlay{display:none;position:fixed;inset:0;background:rgba(7,22,40,.5);z-index:1500;backdrop-filter:blur(3px)}
+.drawer-overlay.open{display:block}
+.drawer{position:fixed;top:0;right:-460px;width:440px;max-width:100vw;height:100%;background:#fff;z-index:1501;display:flex;flex-direction:column;transition:right .35s cubic-bezier(.16,1,.3,1);box-shadow:var(--shadow-xl)}
+.drawer.open{right:0}
+.drawer-head{background:var(--navy);padding:22px 24px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.drawer-head h3{color:#fff;font-family:var(--font-h);font-size:1.15rem}
+.drawer-close{background:rgba(255,255,255,.12);border:none;color:#fff;width:32px;height:32px;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--tr)}
+.drawer-close:hover{background:rgba(255,255,255,.22)}
+.drawer-body{flex:1;overflow-y:auto;padding:22px}
+.drawer-empty{text-align:center;padding:56px 20px;color:var(--text-muted)}
+.drawer-empty p{font-size:.88rem;line-height:1.65;margin-top:12px}
+.eq-item{border:1px solid var(--border);border-radius:var(--radius);padding:15px;margin-bottom:11px;background:var(--off-white)}
+.eq-top{display:flex;justify-content:space-between;align-items:start;margin-bottom:11px;gap:8px}
+.eq-cat{font-size:.67rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--navy-light);margin-bottom:3px}
+.eq-name{font-family:var(--font-h);font-size:.93rem;color:var(--text-dark);line-height:1.3}
+.eq-remove{background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:1rem;transition:var(--tr);padding:2px;flex-shrink:0;line-height:1}
+.eq-remove:hover{color:#c0392b}
+.eq-controls{display:flex;flex-direction:column;gap:7px}
+.eq-row{display:flex;align-items:center;gap:8px}
+.eq-label{font-size:.73rem;font-weight:700;color:var(--text-muted);min-width:58px}
+.qty-input{width:68px;padding:6px 9px;border:1px solid var(--border);border-radius:6px;font-family:var(--font-b);font-size:.84rem;color:var(--text-dark);text-align:center;transition:var(--tr)}
+.qty-input:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 2px rgba(13,35,64,.08)}
+.qty-input:invalid,.qty-input[data-invalid]{border-color:#e74c3c}
+.eq-note{width:100%;padding:8px 11px;border:1px solid var(--border);border-radius:6px;font-family:var(--font-b);font-size:.78rem;color:var(--text-dark);resize:none;min-height:50px;background:#fff;transition:var(--tr)}
+.eq-note:focus{outline:none;border-color:var(--navy)}
+.eq-note::placeholder{color:var(--text-muted)}
+.drawer-foot{border-top:1px solid var(--border);padding:18px 22px;flex-shrink:0;background:#fff}
+.drawer-foot-note{font-size:.76rem;color:var(--text-muted);margin-bottom:14px;line-height:1.6}
+.drawer-btns{display:flex;flex-direction:column;gap:9px}
+.drawer-btns .btn{justify-content:center;width:100%}
+.confirm-msg{background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);padding:16px;text-align:center;margin-bottom:12px;display:none}
+.confirm-msg.show{display:block}
+.confirm-msg p{font-size:.83rem;color:var(--text-body);line-height:1.55;margin-top:6px}
+
+/* Name prompt modal */
+.prompt-overlay{display:none;position:fixed;inset:0;background:rgba(7,22,40,.6);z-index:3000;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+.prompt-overlay.open{display:flex}
+.prompt-box{background:#fff;border-radius:var(--radius-lg);padding:32px;max-width:400px;width:100%;box-shadow:var(--shadow-xl)}
+.prompt-box h3{font-size:1.2rem;margin-bottom:8px}
+.prompt-box p{font-size:.85rem;color:var(--text-muted);margin-bottom:20px;line-height:1.6}
+.prompt-input{width:100%;padding:12px 15px;border:1.5px solid var(--border);border-radius:var(--radius);font-family:var(--font-b);font-size:.9rem;color:var(--text-dark);outline:none;transition:var(--tr);margin-bottom:8px}
+.prompt-input:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(13,35,64,.08)}
+.prompt-actions{display:flex;gap:10px;margin-top:16px}
+.prompt-actions .btn{flex:1;justify-content:center}
+
+/* About page */
+#about{padding-top:100px}
+.about-hero{background:var(--navy);padding:62px 0}
+.about-hero h1{color:#fff}
+.about-hero p{color:rgba(255,255,255,.58);margin-top:11px;max-width:540px}
+.about-body{padding:78px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;margin-bottom:76px}
+.about-img{background:linear-gradient(135deg,var(--light),var(--navy-pale));border-radius:var(--radius-lg);height:380px;display:flex;align-items:center;justify-content:center;font-size:5rem;position:relative;overflow:hidden}
+.about-img::after{content:'Est. 1999';position:absolute;bottom:18px;left:18px;background:var(--navy);color:#fff;font-size:.76rem;font-weight:700;letter-spacing:.06em;padding:5px 13px;border-radius:6px}
+.about-text h2{margin-bottom:18px}
+.about-text p{font-size:.91rem;line-height:1.82;color:var(--text-body);margin-bottom:16px}
+.owner-quote{background:var(--navy);border-radius:var(--radius-lg);padding:34px;margin-top:26px;position:relative}
+.owner-quote::before{content:'\201C';font-family:var(--font-h);font-size:5rem;color:rgba(255,255,255,.1);position:absolute;top:-12px;left:22px;line-height:1}
+.owner-quote p{font-size:.93rem;color:rgba(255,255,255,.78);line-height:1.82;font-style:italic;margin-bottom:18px;position:relative;z-index:1}
+.owner-sig{display:flex;align-items:center;gap:13px}
+.owner-avatar{width:44px;height:44px;background:rgba(255,255,255,.14);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0}
+.owner-name{font-size:.88rem;font-weight:700;color:#fff;line-height:1.3}
+.owner-title{font-size:.73rem;color:rgba(255,255,255,.45)}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.val-card{background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:26px 22px}
+.val-icon{font-size:1.75rem;margin-bottom:12px}
+.val-title{font-family:var(--font-h);font-size:1rem;color:var(--text-dark);margin-bottom:7px}
+.val-desc{font-size:.81rem;color:var(--text-muted);line-height:1.65}
+
+/* FAQ */
+.faq-section{background:var(--off-white);padding:78px 0}
+.faq-list{max-width:720px;margin:44px auto 0}
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:9px;overflow:hidden}
+.faq-q{width:100%;text-align:left;padding:19px 22px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-b);font-size:.88rem;font-weight:700;color:var(--text-dark);gap:12px;transition:var(--tr)}
+.faq-q:hover{background:var(--off-white)}
+.faq-q svg{width:19px;height:19px;color:var(--navy);flex-shrink:0;transition:transform .25s ease}
+.faq-item.open .faq-q svg{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .32s ease}
+.faq-item.open .faq-a{max-height:220px}
+.faq-a-inner{padding:0 22px 18px;font-size:.85rem;color:var(--text-muted);line-height:1.78;border-top:1px solid var(--border);padding-top:14px}
+
+/* Contact */
+#contact{padding-top:100px}
+.contact-hero{background:var(--navy);padding:54px 0}
+.contact-hero h1{color:#fff}
+.contact-hero p{color:rgba(255,255,255,.58);margin-top:11px}
+.contact-body{padding:76px 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.contact-info h3{font-size:1.25rem;margin-bottom:26px}
+.c-detail{display:flex;gap:15px;margin-bottom:20px;align-items:start}
+.c-icon{width:40px;height:40px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;color:#fff}
+.c-label{font-size:.7rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--text-muted);margin-bottom:3px}
+.c-val{font-size:.9rem;color:var(--text-dark);font-weight:600;line-height:1.55}
+.c-val a{color:var(--navy);transition:var(--tr)}
+.c-val a:hover{color:var(--navy-light);text-decoration:underline}
+.dl-bar{margin-top:26px;background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;display:flex;align-items:center;gap:14px}
+.dl-icon{width:40px;height:40px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;color:#fff}
+.dl-text p{font-size:.82rem;font-weight:700;color:var(--text-dark);margin-bottom:1px}
+.dl-text span{font-size:.73rem;color:var(--text-muted)}
+.dl-btn{margin-left:auto;flex-shrink:0}
+.map-box{margin-top:28px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);height:300px;background:var(--light)}
+.map-box iframe{width:100%;height:100%;border:none;display:block}
+.form-box{background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:34px}
+.form-box h3{margin-bottom:22px}
+.form-row{margin-bottom:14px}
+.form-row label{display:block;font-size:.76rem;font-weight:700;color:var(--text-dark);letter-spacing:.04em;margin-bottom:6px}
+.form-input{width:100%;padding:11px 15px;border:1.5px solid var(--border);border-radius:var(--radius);font-family:var(--font-b);font-size:.875rem;color:var(--text-dark);background:#fff;outline:none;transition:var(--tr)}
+.form-input:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(13,35,64,.08)}
+.form-input::placeholder{color:var(--text-muted)}
+textarea.form-input{resize:vertical;min-height:116px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-confirm{background:var(--light);border:1px solid var(--border);border-radius:var(--radius);padding:16px;text-align:center;margin-bottom:14px;display:none}
+.form-confirm.show{display:block}
+.form-confirm p{font-size:.83rem;color:var(--text-body);line-height:1.6;margin-top:6px}
+
+/* Footer */
+footer{background:var(--navy-dark);padding:60px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.07)}
+.ft-brand-name{font-family:var(--font-h);font-size:1.2rem;color:#fff;margin-bottom:5px}
+.ft-brand-tag{font-size:.67rem;color:rgba(255,255,255,.37);letter-spacing:.06em;margin-bottom:14px}
+.ft-brand-desc{font-size:.8rem;color:rgba(255,255,255,.48);line-height:1.75;max-width:270px;margin-bottom:20px}
+.ft-socials{display:flex;gap:9px}
+.ft-socials a{width:34px;height:34px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.55);font-size:.85rem;transition:var(--tr)}
+.ft-socials a:hover{background:rgba(255,255,255,.14);color:#fff}
+.ft-col h4{font-size:.74rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:16px}
+.ft-links{display:flex;flex-direction:column;gap:9px}
+.ft-link{font-size:.82rem;color:rgba(255,255,255,.55);transition:var(--tr);cursor:pointer;position:relative;display:inline-block}
+.ft-link::after{content:'';position:absolute;bottom:-1px;left:0;width:0;height:1px;background:rgba(255,255,255,.7);transition:width .22s ease}
+.ft-link:hover{color:#fff}
+.ft-link:hover::after{width:100%}
+.ft-ci{display:flex;gap:9px;margin-bottom:13px;align-items:start}
+.ft-ci svg{width:14px;height:14px;color:rgba(255,255,255,.38);flex-shrink:0;margin-top:2px}
+.ft-ci span{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.55}
+.footer-bottom{padding:18px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-bottom p,.footer-vat{font-size:.74rem;color:rgba(255,255,255,.28)}
+
+/* Floating */
+.float-wa{position:fixed;bottom:28px;right:28px;z-index:900;width:54px;height:54px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.5);transition:var(--tr);color:#fff}
+.float-wa:hover{transform:scale(1.1);box-shadow:0 12px 32px rgba(37,211,102,.6)}
+.back-top{position:fixed;bottom:90px;right:28px;z-index:900;width:38px;height:38px;background:var(--navy);border:1px solid rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;transition:var(--tr);opacity:0;pointer-events:none;font-size:.85rem}
+.back-top.show{opacity:1;pointer-events:auto}
+.back-top:hover{background:var(--navy-mid);transform:translateY(-2px)}
+
+/* Toast */
+#toast{position:fixed;bottom:94px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 20px;border-radius:8px;font-size:.8rem;font-weight:600;z-index:3000;opacity:0;transition:opacity .3s;white-space:nowrap;box-shadow:var(--shadow-md);pointer-events:none}
+
+/* Page system */
+.page{display:none}.page.active{display:block}
+
+/* Responsive */
+@media(max-width:1024px){
+  .hero-content{grid-template-columns:1fr;gap:44px;padding:60px 0}
+  .hero-right{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .cred-inner,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .about-img{height:250px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links,.nav-actions .btn-white{display:none}
+  .hamburger{display:flex}
+  .hero-stats{gap:22px}
+  .hero-right{grid-template-columns:1fr}
+  .cred-right,.values-grid{grid-template-columns:1fr 1fr}
+  .trust-inner{flex-direction:column;align-items:start;gap:12px}
+  .trust-sep{display:none}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;align-items:start}
+  .form-grid{grid-template-columns:1fr}
+  .modal-actions{flex-direction:column}
+  .drawer{width:100%;right:-100%}
+  .prompt-actions{flex-direction:column}
+}
+@media(max-width:480px){
+  .container{padding:0 16px}
+  .section{padding:60px 0}
+  .cred-right,.values-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column}
+  .hero-btns .btn{justify-content:center}
+  .cat-count{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="showPage('home')" role="button" tabindex="0" aria-label="Go to home">
+        <span class="nav-logo-name">Western Cape Stationers</span>
+        <span class="nav-logo-tag">Your Paper Supply Destination</span>
+      </div>
+      <div class="nav-links" role="navigation" aria-label="Main navigation">
+        <button class="nav-link active" onclick="showPage('home')">Home</button>
+        <button class="nav-link" onclick="showPage('catalogue')">Catalogue</button>
+        <button class="nav-link" onclick="showPage('about')">About Us</button>
+        <button class="nav-link" onclick="showPage('contact')">Contact</button>
+      </div>
+      <div class="nav-actions">
+        <button class="cart-btn" onclick="openDrawer()" aria-label="View enquiry list">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          <span class="cart-badge" id="cartBadge" aria-live="polite">0</span>
+        </button>
+        <button class="btn btn-white btn-sm" onclick="showPage('contact')">Get a Quote</button>
+      </div>
+      <button class="hamburger" onclick="toggleMobile()" aria-label="Toggle menu" aria-expanded="false" id="hamBtn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+  <button class="mobile-link" onclick="showPage('home');toggleMobile()">Home</button>
+  <button class="mobile-link" onclick="showPage('catalogue');toggleMobile()">Catalogue</button>
+  <button class="mobile-link" onclick="showPage('about');toggleMobile()">About Us</button>
+  <button class="mobile-link" onclick="showPage('contact');toggleMobile()">Contact</button>
+  <div class="mobile-actions">
+    <button class="btn btn-white" onclick="openDrawer();toggleMobile()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+      View Enquiry List
+    </button>
+    <a href="https://wa.me/27724211909" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp Us</a>
+  </div>
+</div>
+
+<!-- ══════════════ HOME PAGE ══════════════ -->
+<div class="page active" id="page-home">
+
+  <section id="home">
+    <div class="hero-bg"></div><div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-left">
+          <div class="hero-badge">✓ &nbsp;Level 1 B-BBEE Certified Supplier</div>
+          <h1 class="hero-h1">Your Paper Supply<br><em>Destination</em></h1>
+          <p class="hero-sub">Western Cape Stationers is a 100% female-owned, family-run supplier delivering quality stationery, cleaning materials, refreshments and more — across the Western Cape since 1999.</p>
+          <div class="hero-btns">
+            <button class="btn btn-white" onclick="showPage('catalogue')">Browse Catalogue</button>
+            <button class="btn btn-outline-white" onclick="showPage('contact')">Request a Quote</button>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><div class="hero-stat-num">25+</div><div class="hero-stat-label">Years in Business</div></div>
+            <div class="hero-stat"><div class="hero-stat-num">L1</div><div class="hero-stat-label">B-BBEE Rating</div></div>
+            <div class="hero-stat"><div class="hero-stat-num">WC</div><div class="hero-stat-label">Wide Delivery</div></div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-card" onclick="showPage('catalogue')"><div class="hero-card-top"><div class="hero-card-icon">📄</div><div class="hero-card-name">Stationery &amp; Paper</div></div><div class="hero-card-desc">A4, A3, colour paper &amp; full stationery range for offices and institutions.</div></div>
+          <div class="hero-card" onclick="showPage('catalogue')"><div class="hero-card-top"><div class="hero-card-icon">🧹</div><div class="hero-card-name">Cleaning Materials</div></div><div class="hero-card-desc">Black refuse bags, cleaning supplies, and hygiene products in bulk.</div></div>
+          <div class="hero-card" onclick="showPage('catalogue')"><div class="hero-card-top"><div class="hero-card-icon">☕</div><div class="hero-card-name">Refreshments</div></div><div class="hero-card-desc">Coffee, tea, sugar, and office commodities supplied at competitive rates.</div></div>
+          <div class="hero-card" onclick="showPage('catalogue')"><div class="hero-card-top"><div class="hero-card-icon">✏️</div><div class="hero-card-name">Stationery Essentials</div></div><div class="hero-card-desc">Pens, pencils, markers, staplers, clips, dividers and more.</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
+  </section>
+
+  <div class="trust-strip">
+    <div class="container">
+      <div class="trust-inner">
+        <div class="trust-item">✅ &nbsp;Level 1 B-BBEE Certified</div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">👩‍💼 &nbsp;100% Female-Owned Business</div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">🏛️ &nbsp;Government Contract Track Record</div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">🚚 &nbsp;Delivery Across Western Cape</div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">📍 &nbsp;Est. 1999 · Rylands Estate, Cape Town</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Products -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center reveal" style="text-align:center">
+        <div class="section-tag" style="justify-content:center">Featured Products</div>
+        <h2>Best Sellers &amp; New Arrivals</h2>
+        <p style="margin-top:11px;color:var(--text-muted);max-width:500px;margin-left:auto;margin-right:auto">Our most requested supplies — ready to quote, ready to deliver.</p>
+        <div style="width:46px;height:3px;background:var(--navy);border-radius:3px;margin:18px auto 0"></div>
+      </div>
+      <div class="prod-grid" id="featuredGrid"></div>
+      <div style="text-align:center;margin-top:38px" class="reveal">
+        <button class="btn btn-outline-navy" onclick="showPage('catalogue')">View Full Catalogue →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- B-BBEE Credentials -->
+  <div class="cred-section">
+    <div class="container">
+      <div class="cred-inner">
+        <div class="cred-left reveal">
+          <div class="section-tag section-tag-light">Credentials &amp; Compliance</div>
+          <h2>A Trusted, Compliant Supplier for Government &amp; Corporate</h2>
+          <p>We have an established track record supplying the <strong>Western Cape Department of Social Development</strong> and the <strong>City of Cape Town</strong>. Our Level 1 B-BBEE status makes us a preferred procurement partner for any organisation with transformation targets.</p>
+          <div class="cred-badges">
+            <div class="cred-badge"><div class="cred-badge-icon">🏆</div><div><div class="cred-badge-title">B-BBEE Status</div><div class="cred-badge-text">Level 1 Certified Contributor</div></div></div>
+            <div class="cred-badge"><div class="cred-badge-icon">📋</div><div><div class="cred-badge-title">VAT Registration</div><div class="cred-badge-text">VAT No. 4670201690</div></div></div>
+          </div>
+        </div>
+        <div class="cred-right reveal d2">
+          <div class="cred-stat"><div class="cred-stat-num">1</div><div class="cred-stat-label">B-BBEE Level — highest possible contributor status</div></div>
+          <div class="cred-stat"><div class="cred-stat-num">25+</div><div class="cred-stat-label">Years supplying government &amp; corporate clients</div></div>
+          <div class="cred-stat"><div class="cred-stat-num">100%</div><div class="cred-stat-label">Female-owned and family-operated since 1999</div></div>
+          <div class="cred-stat"><div class="cred-stat-num">WC</div><div class="cred-stat-label">Full Western Cape delivery coverage</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Choose Us -->
+  <section class="section off-white-bg">
+    <div class="container">
+      <div style="text-align:center" class="reveal">
+        <div class="section-tag" style="justify-content:center">Why Us</div>
+        <h2>Why Choose Western Cape Stationers</h2>
+        <div style="width:46px;height:3px;background:var(--navy);border-radius:3px;margin:18px auto 0"></div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal d1"><div class="why-icon">🚚</div><div class="why-title">Reliable Delivery</div><div class="why-desc">Strong logistics covering the Western Cape — from Cape Town's CBD to outlying municipalities.</div></div>
+        <div class="why-card reveal d2"><div class="why-icon">🏆</div><div class="why-title">Level 1 B-BBEE</div><div class="why-desc">Top-scoring preferential procurement partner for government and corporate buyers.</div></div>
+        <div class="why-card reveal d3"><div class="why-icon">⭐</div><div class="why-title">Service Excellence</div><div class="why-desc">Every order handled personally by our family team — fast, accurate, and reliable every time.</div></div>
+        <div class="why-card reveal d4"><div class="why-icon">💰</div><div class="why-title">Competitive Pricing</div><div class="why-desc">Our lean structure means savings go directly to you — ideal for bulk and recurring orders.</div></div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /home page -->
+
+<!-- ══════════════ CATALOGUE PAGE ══════════════ -->
+<div class="page" id="page-catalogue">
+  <div class="cat-header">
+    <div class="container">
+      <div class="section-tag section-tag-light">Product Catalogue</div>
+      <h1>Our Products</h1>
+      <p>Browse our full range. Add items to your Enquiry List to request a quote.</p>
+    </div>
+  </div>
+  <div class="cat-toolbar">
+    <div class="container">
+      <div class="cat-toolbar-inner">
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" id="searchInput" placeholder="Search products…" oninput="filterProducts()" aria-label="Search products">
+        </div>
+        <div class="filter-tabs" id="filterTabs" role="group" aria-label="Category filters"></div>
+        <span class="cat-count" id="catCount"></span>
+      </div>
+    </div>
+  </div>
+  <div class="cat-body">
+    <div class="container">
+      <div class="prod-grid" id="catalogueGrid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ ABOUT PAGE ══════════════ -->
+<div class="page" id="page-about">
+  <div class="about-hero">
+    <div class="container">
+      <div class="section-tag section-tag-light">About Us</div>
+      <h1>Our Story</h1>
+      <p>A family-run, female-led business with 25+ years serving the Western Cape.</p>
+    </div>
+  </div>
+  <div class="about-body">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img reveal">🏢</div>
+        <div class="about-text reveal d2">
+          <div class="section-tag">Our History</div>
+          <h2>From Family Roots to Institutional Partner</h2>
+          <p>Western Cape Stationers was acquired in 1999 by <strong>Moenadia Rooi Moosa</strong> — a decision rooted in entrepreneurship, service, and a deep commitment to community. What began as a local paper supplier has grown into a trusted B2B partner for government departments and corporate clients across the Western Cape.</p>
+          <p>Our core values of <strong>reliability, service excellence, and competitive pricing</strong> have never changed. Every order is managed personally by our family team, ensuring consistency and care that larger suppliers cannot match.</p>
+          <p>We hold a <strong>Level 1 B-BBEE certification</strong> and have an established track record with clients including the <strong>Western Cape Department of Social Development</strong> and the <strong>City of Cape Town</strong>.</p>
+          <div class="owner-quote">
+            <p>We built this business on trust. When a client places an order with us, they know it will arrive on time, at the right price, and exactly as requested. That promise has carried us for 25 years and will carry us for 25 more.</p>
+            <div class="owner-sig">
+              <div class="owner-avatar">👩‍💼</div>
+              <div>
+                <div class="owner-name">Moenadia Rooi Moosa</div>
+                <div class="owner-title">Owner &amp; Director, Western Cape Stationers</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="section-tag">Our Values</div>
+        <h2>What Drives Us</h2>
+        <div class="values-grid">
+          <div class="val-card"><div class="val-icon">🤝</div><div class="val-title">Reliability</div><div class="val-desc">Every order delivered on time. Every quote transparent. Every promise kept.</div></div>
+          <div class="val-card"><div class="val-icon">⭐</div><div class="val-title">Service Excellence</div><div class="val-desc">We don't just supply — we serve. Responsive, professional, and invested in your satisfaction.</div></div>
+          <div class="val-card"><div class="val-icon">💡</div><div class="val-title">Competitive Pricing</div><div class="val-desc">Our lean, family-run structure means savings go directly to our clients — without compromise.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-section">
+    <div class="container">
+      <div style="text-align:center" class="reveal">
+        <div class="section-tag" style="justify-content:center">FAQ</div>
+        <h2>Frequently Asked Questions</h2>
+        <div style="width:46px;height:3px;background:var(--navy);border-radius:3px;margin:16px auto 0"></div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How do I request a quote?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><div class="faq-a-inner">Browse the catalogue, add products to your Enquiry List using the "+ Enquiry" button, then click "Send via WhatsApp" or "Send Enquiry by Email". We'll respond with a formal, itemised quotation promptly.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Do you deliver?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><div class="faq-a-inner">Yes. We have strong logistics capability and deliver across the Western Cape — including Cape Town, surrounding municipalities, and outlying areas. Delivery terms are confirmed at the time of quotation.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What areas do you cover?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><div class="faq-a-inner">We service the entire Western Cape. Our base is Rylands Estate, Cape Town, but we deliver to government departments, municipalities, and corporate offices throughout the province.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Are you registered for government procurement?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><div class="faq-a-inner">Yes. We are a Level 1 B-BBEE certified supplier and VAT registered (VAT No. 4670201690). We have a proven track record supplying the Western Cape Department of Social Development and the City of Cape Town.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Why aren't prices shown on the catalogue?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><div class="faq-a-inner">Pricing varies based on quantity, specification, and delivery requirements. Add items to your Enquiry List and we'll provide a competitive, itemised quotation.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can I download your company profile?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><div class="faq-a-inner">Yes — visit the Contact page and click "Download" on the Company Profile bar. You'll get a PDF with our full credentials, track record, product categories, and contact details.</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ CONTACT PAGE ══════════════ -->
+<div class="page" id="page-contact">
+  <div class="contact-hero">
+    <div class="container">
+      <div class="section-tag section-tag-light">Get in Touch</div>
+      <h1>Contact Us</h1>
+      <p>Send a quote enquiry, ask a question, or find us on the map.</p>
+    </div>
+  </div>
+  <div class="contact-body">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Contact Details</h3>
+          <div class="c-detail"><div class="c-icon">📍</div><div><div class="c-label">Address</div><div class="c-val">40 Mabel Road<br>Rylands Estate, Cape Town, 7766</div></div></div>
+          <div class="c-detail"><div class="c-icon">📧</div><div><div class="c-label">Email</div><div class="c-val"><a href="mailto:ibrahim.oughradar@outlook.com">ibrahim.oughradar@outlook.com</a></div></div></div>
+          <div class="c-detail"><div class="c-icon">💬</div><div><div class="c-label">WhatsApp</div><div class="c-val"><a href="https://wa.me/27724211909" target="_blank" rel="noopener">+27 72 421 1909</a></div></div></div>
+          <div class="c-detail"><div class="c-icon">🏛️</div><div><div class="c-label">VAT Registration</div><div class="c-val">4670201690</div></div></div>
+          <div class="c-detail"><div class="c-icon">🏆</div><div><div class="c-label">B-BBEE Status</div><div class="c-val">Level 1 Contributor</div></div></div>
+          <div class="dl-bar">
+            <div class="dl-icon">📄</div>
+            <div class="dl-text"><p>Company Profile</p><span>Professional credentials PDF</span></div>
+            <button class="btn btn-outline-navy btn-sm dl-btn" onclick="downloadPDF()">⬇ Download</button>
+          </div>
+          <div class="map-box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.2!2d18.5272!3d-33.9706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5ba2f7a91b5f%3A0x0!2sMabel+Rd%2C+Rylands+Estate%2C+Cape+Town%2C+7764!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="40 Mabel Road, Rylands Estate, Cape Town">
+            </iframe>
+          </div>
+        </div>
+        <div class="form-box reveal d2">
+          <h3>Send an Enquiry</h3>
+          <div class="form-confirm" id="formConfirm">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <p><strong>Thank you!</strong> We'll be in touch within 1 business day.</p>
+          </div>
+          <form onsubmit="submitContactForm(event)" novalidate>
+            <div class="form-grid">
+              <div class="form-row"><label for="fname">Full Name *</label><input class="form-input" id="fname" type="text" required placeholder="Your name"></div>
+              <div class="form-row"><label for="fcompany">Company Name</label><input class="form-input" id="fcompany" type="text" placeholder="Your company"></div>
+            </div>
+            <div class="form-grid">
+              <div class="form-row"><label for="femail">Email Address *</label><input class="form-input" id="femail" type="email" required placeholder="your@email.com"></div>
+              <div class="form-row"><label for="fphone">Phone / WhatsApp</label><input class="form-input" id="fphone" type="tel" placeholder="+27…"></div>
+            </div>
+            <div class="form-row"><label for="fsubject">Subject</label><input class="form-input" id="fsubject" type="text" placeholder="e.g. Quote request for stationery"></div>
+            <div class="form-row"><label for="fmsg">Message *</label><textarea class="form-input" id="fmsg" required placeholder="Tell us what you need…"></textarea></div>
+            <button type="submit" class="btn btn-navy" style="width:100%;justify-content:center">Send Enquiry</button>
+          </form>
+          <div style="margin-top:14px;text-align:center">
+            <p style="font-size:.76rem;color:var(--text-muted);margin-bottom:10px">Prefer to chat directly?</p>
+            <a href="https://wa.me/27724211909" target="_blank" rel="noopener" class="btn btn-wa" style="width:100%;justify-content:center">💬 Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="ft-brand-name">Western Cape Stationers</div>
+        <div class="ft-brand-tag">Your Paper Supply Destination</div>
+        <div class="ft-brand-desc">A 100% female-owned, family-run stationery and supply business serving the Western Cape since 1999. Level 1 B-BBEE certified supplier.</div>
+        <div class="ft-socials">
+          <a href="https://wa.me/27724211909" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+          <a href="mailto:ibrahim.oughradar@outlook.com" title="Email">✉️</a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <div class="ft-links">
+          <span class="ft-link" onclick="showPage('home')">Home</span>
+          <span class="ft-link" onclick="showPage('catalogue')">Product Catalogue</span>
+          <span class="ft-link" onclick="showPage('about')">About Us</span>
+          <span class="ft-link" onclick="showPage('contact')">Contact</span>
+        </div>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <div class="ft-links">
+          <span class="ft-link" onclick="showPage('catalogue')">Stationery &amp; Paper</span>
+          <span class="ft-link" onclick="showPage('catalogue')">Cleaning Materials</span>
+          <span class="ft-link" onclick="showPage('catalogue')">Refreshments</span>
+          <span class="ft-link" onclick="showPage('catalogue')">Stationery Essentials</span>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="ft-ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span>40 Mabel Road, Rylands Estate<br>Cape Town, 7766</span></div>
+        <div class="ft-ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><span>ibrahim.oughradar@outlook.com</span></div>
+        <div class="ft-ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><span>+27 72 421 1909</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Western Cape Stationers. All rights reserved. Acquired 1999 by Moenadia Rooi Moosa.</p>
+      <span class="footer-vat">VAT Reg. No. 4670201690 &nbsp;·&nbsp; Level 1 B-BBEE</span>
+    </div>
+  </div>
+</footer>
+
+<!-- PRODUCT MODAL -->
+<div class="modal-overlay" id="productModal" onclick="handleModalClick(event)" role="dialog" aria-modal="true" aria-label="Product detail">
+  <div class="modal-wrap">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <div class="modal" id="modalContent"></div>
+  </div>
+</div>
+
+<!-- ENQUIRY DRAWER -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="enquiryDrawer" role="dialog" aria-modal="true" aria-label="Enquiry list">
+  <div class="drawer-head">
+    <h3>Enquiry List</h3>
+    <button class="drawer-close" onclick="closeDrawer()" aria-label="Close drawer">✕</button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+  <div class="drawer-foot" id="drawerFoot" style="display:none">
+    <div class="confirm-msg" id="drawerConfirm">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <p><strong>Enquiry sent!</strong><br>We'll be in touch shortly. Thank you.</p>
+    </div>
+    <p class="drawer-foot-note">Review your list, set quantities, and add any notes before sending. We'll respond with a formal quotation.</p>
+    <div class="drawer-btns">
+      <a id="waBtn" href="#" target="_blank" rel="noopener" class="btn btn-wa">💬 Send via WhatsApp</a>
+      <button class="btn btn-navy" onclick="sendEmailEnquiry()">✉️ Send Enquiry by Email</button>
+      <button class="btn btn-outline-navy btn-sm" onclick="clearEnquiry()">Clear List</button>
+    </div>
+  </div>
+</div>
+
+<!-- NAME PROMPT MODAL -->
+<div class="prompt-overlay" id="promptOverlay" role="dialog" aria-modal="true" aria-label="Your details">
+  <div class="prompt-box">
+    <h3>Before we send…</h3>
+    <p>Add your name and company so we can personalise your WhatsApp enquiry.</p>
+    <input class="prompt-input" id="promptName" type="text" placeholder="Your name (optional)">
+    <input class="prompt-input" id="promptCompany" type="text" placeholder="Company name (optional)">
+    <div class="prompt-actions">
+      <button class="btn btn-outline-navy" onclick="closePrompt()">Cancel</button>
+      <button class="btn btn-wa" onclick="sendWA()">💬 Send via WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/27724211909" target="_blank" rel="noopener" class="float-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top" aria-label="Back to top">↑</button>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+// ── Product Data ──────────────────────────────────────────
+const products = [
+  // ── Stationery & Paper ──────────────────────────
+  {id:1,name:"Copy Crown A4 80gsm",cat:"Stationery & Paper",emoji:"📄",featured:true,isNew:false,
+   desc:"Copy Crown premium multi-purpose A4 office paper. 80gsm weight delivers crisp, clean prints on laser and inkjet printers. Sold per ream of 500 sheets.",
+   specs:[["Brand","Copy Crown"],["Size","A4 (210 × 297mm)"],["Weight","80gsm"],["Sheets/Ream","500"],["Brightness","≥ 96 CIE"],["Compatibility","Laser & Inkjet"]]},
+  {id:2,name:"Rotatrim A4 80gsm",cat:"Stationery & Paper",emoji:"📄",featured:true,isNew:false,
+   desc:"Mondi Rotatrim premium bond paper, engineered for premium print performance. 80gsm, smooth finish, excellent sheet formation.",
+   specs:[["Brand","Mondi Rotatrim"],["Size","A4 (210 × 297mm)"],["Weight","80gsm"],["Sheets/Ream","500"],["Brightness","≥ 161 CIE"],["Compatibility","Laser & Inkjet"]]},
+  {id:3,name:"Rotatrim Lite A4 75gsm",cat:"Stationery & Paper",emoji:"📋",featured:true,isNew:false,
+   desc:"Rotatrim Lite — a lighter 75gsm option for high-volume everyday printing. Cost-effective without compromising quality.",
+   specs:[["Brand","Mondi Rotatrim Lite"],["Size","A4 (210 × 297mm)"],["Weight","75gsm"],["Sheets/Ream","500"],["Use","High-volume everyday printing"]]},
+  {id:4,name:"Rotatrim A3 80gsm",cat:"Stationery & Paper",emoji:"📐",featured:true,isNew:false,
+   desc:"Mondi Rotatrim A3 bond paper for large-format printing, architectural plans, and wide documents. Premium print performance.",
+   specs:[["Brand","Mondi Rotatrim"],["Size","A3 (297 × 420mm)"],["Weight","80gsm"],["Sheets/Ream","500"],["Compatibility","Laser & Inkjet"]]},
+  {id:5,name:"HP A4 80gsm Office Paper",cat:"Stationery & Paper",emoji:"🖨️",featured:true,isNew:false,
+   desc:"HP branded premium A4 copy paper. Optimised for HP printers but compatible with all laser and inkjet devices. Consistent, jam-free performance.",
+   specs:[["Brand","HP"],["Size","A4 (210 × 297mm)"],["Weight","80gsm"],["Sheets/Ream","500"],["Brightness","≥ 161 CIE"],["Compatibility","All laser & inkjet"]]},
+  {id:6,name:"Colour Paper – Assorted A4",cat:"Stationery & Paper",emoji:"🌈",featured:true,isNew:false,
+   desc:"Bright assorted colour A4 copy paper for notices, filing colour-coding, and creative projects. Available in pastel and vivid shades.",
+   specs:[["Size","A4"],["Weight","80gsm"],["Sheets/Ream","500"],["Colours","Assorted pastel & vivid"],["Compatibility","Laser & Inkjet"]]},
+  {id:7,name:"Envelopes – DL (Box of 500)",cat:"Stationery & Paper",emoji:"✉️",featured:false,isNew:false,
+   desc:"DL size white envelopes, ideal for standard A4 letters folded in thirds. Self-seal or gummed options. Suitable for government and corporate correspondence.",
+   specs:[["Size","DL (110 × 220mm)"],["Colour","White"],["Pack Size","Box of 500"],["Seal","Self-seal / Gummed"],["Window","Available with or without"]]},
+  {id:8,name:"Envelopes – C4 (Box of 250)",cat:"Stationery & Paper",emoji:"✉️",featured:false,isNew:false,
+   desc:"C4 size envelopes for sending unfolded A4 documents. Strong, professional quality. Ideal for contracts, reports, and official correspondence.",
+   specs:[["Size","C4 (229 × 324mm)"],["Colour","White / Manilla"],["Pack Size","Box of 250"],["Seal","Self-seal / Gummed"],["Fits","A4 unfolded"]]},
+  {id:9,name:"Envelopes – C5 (Box of 500)",cat:"Stationery & Paper",emoji:"✉️",featured:false,isNew:false,
+   desc:"C5 size envelopes for A4 documents folded in half. Widely used in offices and government departments for standard mail.",
+   specs:[["Size","C5 (162 × 229mm)"],["Colour","White"],["Pack Size","Box of 500"],["Seal","Self-seal / Gummed"],["Fits","A4 folded in half"]]},
+  {id:10,name:"Permanent Markers (Box of 10)",cat:"Stationery & Paper",emoji:"🖊️",featured:false,isNew:false,
+   desc:"Black permanent markers with bullet tip. Waterproof and fade-resistant ink. Suitable for labelling boxes, files, and general office marking.",
+   specs:[["Pack Size","Box of 10"],["Tip","Bullet / Chisel"],["Ink","Permanent, waterproof"],["Colour","Black / Assorted"],["Surface","Multi-surface"]]},
+  {id:11,name:"Pencils HB (Box of 72)",cat:"Stationery & Paper",emoji:"✏️",featured:false,isNew:false,
+   desc:"Standard HB graphite pencils, pre-sharpened and ready to use. Smooth, consistent mark-making for writing, drawing, and marking.",
+   specs:[["Grade","HB"],["Pack Size","Box of 72"],["Pre-sharpened","Yes"],["Body","Hexagonal wood"]]},
+  {id:12,name:"Staples 26/6 (Box of 5000)",cat:"Stationery & Paper",emoji:"📎",featured:false,isNew:false,
+   desc:"Standard 26/6 staples compatible with most desktop staplers. Full strip, galvanised for smooth, reliable stapling.",
+   specs:[["Size","26/6"],["Pack Size","5000 staples"],["Material","Galvanised steel"],["Compatibility","Standard desktop staplers"]]},
+  {id:13,name:"Paper Clips – Assorted (Box of 500)",cat:"Stationery & Paper",emoji:"🖇️",featured:false,isNew:false,
+   desc:"Assorted size paper clips in a mixed box. Smooth chrome finish, corrosion-resistant. Essential for organising documents and files.",
+   specs:[["Pack Size","Box of 500"],["Sizes","Small, Medium, Large"],["Finish","Chrome / Silver"],["Material","Steel wire"]]},
+  {id:14,name:"File Dividers A4 (Set of 10)",cat:"Stationery & Paper",emoji:"📂",featured:false,isNew:false,
+   desc:"Tabbed A4 file dividers for lever arch files and ring binders. Numbered tabs for easy section organisation. Card stock.",
+   specs:[["Tabs","10 sections"],["Size","A4"],["Material","Card"],["Tab Style","Numbered / Blank"],["Compatibility","Lever arch & ring binders"]]},
+  // ── Cleaning Materials ───────────────────────────
+  {id:15,name:"Black Refuse Bags (Box of 200)",cat:"Cleaning Materials",emoji:"🗑️",featured:false,isNew:false,
+   desc:"Heavy-duty black refuse bags, 75L capacity. Tear-resistant and leak-proof for office and facility use.",
+   specs:[["Capacity","75 Litres"],["Material","LDPE"],["Pack Size","Box of 200"],["Colour","Black"]]},
+  {id:16,name:"Floor Cleaner – 5L",cat:"Cleaning Materials",emoji:"🧹",featured:false,isNew:false,
+   desc:"Multi-surface floor cleaner concentrate for tiles, vinyl, and sealed floors. Fresh scent, suitable for institutional use.",
+   specs:[["Volume","5 Litres"],["Type","Concentrate"],["Surfaces","Multi-surface"],["Scent","Pine / Lavender"]]},
+  // ── Refreshments ────────────────────────────────
+  {id:17,name:"Instant Coffee (750g)",cat:"Refreshments",emoji:"☕",featured:false,isNew:false,
+   desc:"Popular-brand instant coffee granules. Rich flavour, quick to prepare. Ideal for office kitchens supplied in bulk.",
+   specs:[["Weight","750g"],["Type","Instant / Granules"],["Packaging","Jar / Tin"],["Servings","Approx. 375"]]},
+  {id:18,name:"Rooibos Tea Bags (100pk)",cat:"Refreshments",emoji:"🍵",featured:false,isNew:false,
+   desc:"South African rooibos tea bags, individually enveloped. Naturally caffeine-free. Standard office kitchen supply.",
+   specs:[["Count","100 Bags"],["Type","Rooibos"],["Packaging","Enveloped bags"],["Caffeine","Caffeine-free"]]},
+];
+
+// ── Enquiry / Cart ──────────────────────────────────────────
+let enquiry = [];
+
+function addToEnquiry(id){
+  const p = products.find(x=>x.id===id);
+  if(!p) return;
+  const ex = enquiry.find(x=>x.id===id);
+  if(ex){ ex.qty = Math.min(9999, ex.qty+1); }
+  else{ enquiry.push({...p, qty:1, note:''}); }
+  updateBadge();
+  renderDrawer();
+  showToast(`"${p.name}" added to enquiry list`);
+}
+
+function removeFromEnquiry(id){
+  enquiry = enquiry.filter(x=>x.id!==id);
+  updateBadge();
+  renderDrawer();
+}
+
+function updateQty(id, val){
+  const item = enquiry.find(x=>x.id===id);
+  if(!item) return;
+  const n = parseInt(val);
+  if(isNaN(n)||n<1){ item.qty=1; } else { item.qty=Math.min(n,9999); }
+}
+
+function updateNote(id, val){
+  const item = enquiry.find(x=>x.id===id);
+  if(item) item.note = val;
+}
+
+function clearEnquiry(){
+  if(!enquiry.length) return;
+  if(confirm('Clear your entire enquiry list?')){ enquiry=[]; updateBadge(); renderDrawer(); }
+}
+
+function updateBadge(){
+  const b = document.getElementById('cartBadge');
+  b.textContent = enquiry.length;
+  b.classList.toggle('show', enquiry.length>0);
+}
+
+// ── Drawer ──────────────────────────────────────────────────
+function openDrawer(){
+  document.getElementById('enquiryDrawer').classList.add('open');
+  document.getElementById('drawerOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  renderDrawer();
+}
+function closeDrawer(){
+  document.getElementById('enquiryDrawer').classList.remove('open');
+  document.getElementById('drawerOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+function renderDrawer(){
+  const body = document.getElementById('drawerBody');
+  const foot = document.getElementById('drawerFoot');
+  const confirm = document.getElementById('drawerConfirm');
+  if(!enquiry.length){
+    body.innerHTML=`<div class="drawer-empty">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+      <p>Your enquiry list is empty.<br>Browse the catalogue and add products.</p>
+      <button class="btn btn-navy btn-sm" style="margin-top:14px" onclick="closeDrawer();showPage('catalogue')">Browse Catalogue</button>
+    </div>`;
+    foot.style.display='none';
+    return;
+  }
+  foot.style.display='block';
+  confirm.classList.remove('show');
+  body.innerHTML = enquiry.map(item=>`
+    <div class="eq-item">
+      <div class="eq-top">
+        <div>
+          <div class="eq-cat">${item.cat}</div>
+          <div class="eq-name">${item.emoji} ${item.name}</div>
+        </div>
+        <button class="eq-remove" onclick="removeFromEnquiry(${item.id})" aria-label="Remove ${item.name}">✕</button>
+      </div>
+      <div class="eq-controls">
+        <div class="eq-row">
+          <span class="eq-label">Quantity</span>
+          <input class="qty-input" type="number" min="1" max="9999" value="${item.qty}"
+            onchange="updateQty(${item.id},this.value);this.value=enquiry.find(x=>x.id===${item.id}).qty"
+            oninput="if(this.value<1||this.value==='')this.dataset.invalid=true;else delete this.dataset.invalid"
+            aria-label="Quantity for ${item.name}">
+        </div>
+        <textarea class="eq-note" placeholder="Note: spec, size, colour, brand…"
+          onchange="updateNote(${item.id},this.value)"
+          aria-label="Note for ${item.name}">${item.note||''}</textarea>
+      </div>
+    </div>`).join('');
+}
+
+// ── Name Prompt → WhatsApp ───────────────────────────────────
+function openPrompt(){
+  document.getElementById('promptOverlay').classList.add('open');
+  document.getElementById('promptName').focus();
+}
+function closePrompt(){
+  document.getElementById('promptOverlay').classList.remove('open');
+}
+function sendWA(){
+  const name = document.getElementById('promptName').value.trim();
+  const company = document.getElementById('promptCompany').value.trim();
+  closePrompt();
+  const header = name
+    ? `Hello Western Cape Stationers,\n\nMy name is ${name}${company?' from '+company:''}.\n\nI would like to request a quotation for the following items:`
+    : `Hello Western Cape Stationers,\n\nI would like to request a quotation for the following items:`;
+  const lines = enquiry.map(i=>`• ${i.emoji} ${i.name} (Qty: ${i.qty})${i.note?' — '+i.note:''}`).join('\n');
+  const msg = encodeURIComponent(`${header}\n\n${lines}\n\nPlease send pricing and availability. Thank you.`);
+  window.open(`https://wa.me/27724211909?text=${msg}`,'_blank','noopener');
+  const confirm = document.getElementById('drawerConfirm');
+  confirm.classList.add('show');
+  setTimeout(()=>confirm.classList.remove('show'),6000);
+}
+
+// Wire up WA button to open prompt
+document.getElementById('waBtn').addEventListener('click',function(e){
+  e.preventDefault();
+  if(!enquiry.length) return;
+  openPrompt();
+});
+
+function sendEmailEnquiry(){
+  if(!enquiry.length) return;
+  const lines = enquiry.map(i=>`• ${i.emoji} ${i.name} (Qty: ${i.qty})${i.note?' | Note: '+i.note:''}`).join('\n');
+  const subject = encodeURIComponent('Quote Request – Western Cape Stationers');
+  const body = encodeURIComponent(`Hello,\n\nI would like to request a quotation for the following:\n\n${lines}\n\nPlease send me pricing and availability.\n\nThank you.`);
+  window.location.href=`mailto:ibrahim.oughradar@outlook.com?subject=${subject}&body=${body}`;
+  const confirm = document.getElementById('drawerConfirm');
+  confirm.classList.add('show');
+  setTimeout(()=>confirm.classList.remove('show'),6000);
+}
+
+// ── Toast ────────────────────────────────────────────────────
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent='✓ '+msg;
+  t.style.opacity='1';
+  clearTimeout(t._t);
+  t._t=setTimeout(()=>t.style.opacity='0',2600);
+}
+
+// ── Product Modal ────────────────────────────────────────────
+function openModal(id){
+  const p = products.find(x=>x.id===id);
+  if(!p) return;
+  document.getElementById('modalContent').innerHTML=`
+    ${p.imgSrc
+      ? `<div class="modal-thumb" style="background:#f5f8fc;padding:0;"><img src="${p.imgSrc}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;padding:24px;"></div>`
+      : `<div class="modal-thumb">${p.emoji}</div>`
+    }
+    <div class="modal-body">
+      <button class="modal-back" onclick="closeModal()">← Back to catalogue</button>
+      <div class="modal-cat">${p.cat}</div>
+      <div class="modal-title">${p.name}</div>
+      <div class="modal-desc">${p.desc}</div>
+      <div class="modal-specs">
+        <h4>Specifications</h4>
+        ${p.specs.map(s=>`<div class="spec-row"><span class="spec-key">${s[0]}</span><span class="spec-val">${s[1]}</span></div>`).join('')}
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-navy" onclick="addToEnquiry(${p.id});closeModal()">+ Add to Enquiry List</button>
+        <a href="https://wa.me/27724211909?text=${encodeURIComponent(`Hi! I'd like a quote for: ${p.name}`)}" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp Quote</a>
+      </div>
+    </div>`;
+  document.getElementById('productModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function handleModalClick(e){
+  if(e.target===document.getElementById('productModal')) closeModal();
+}
+function closeModal(){
+  document.getElementById('productModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeModal();closeDrawer();closePrompt();}
+});
+
+// ── Render Cards ──────────────────────────────────────────────
+function makeCard(p){
+  return `<div class="prod-card reveal" role="article">
+    <div class="prod-thumb" onclick="openModal(${p.id})" role="button" tabindex="0" aria-label="View ${p.name} details" onkeydown="if(event.key==='Enter')openModal(${p.id})" style="${p.imgSrc?'padding:0;background:#fff;':''}">
+      ${p.isNew?'<div class="new-badge">New Arrival</div>':''}
+      ${p.imgSrc
+        ? `<img src="${p.imgSrc}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;padding:12px;">`
+        : `<span class="em">${p.emoji}</span><span class="hint">Click for details</span>`
+      }
+    </div>
+    <div class="prod-body">
+      <div class="prod-cat">${p.cat}</div>
+      <div class="prod-name" onclick="openModal(${p.id})" role="button" tabindex="0" onkeydown="if(event.key==='Enter')openModal(${p.id})">${p.name}</div>
+      <div class="prod-desc">${p.desc.substring(0,90)}…</div>
+      <div class="prod-actions">
+        <button class="btn btn-navy btn-sm" onclick="addToEnquiry(${p.id})">+ Enquiry</button>
+        <button class="btn btn-outline-navy btn-sm" onclick="openModal(${p.id})">Details</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+// ── Featured Grid ─────────────────────────────────────────────
+function renderFeatured(){
+  const g = document.getElementById('featuredGrid');
+  if(!g) return;
+  g.innerHTML = products.filter(p=>p.featured).map(makeCard).join('');
+  initReveal();
+}
+
+// ── Catalogue ─────────────────────────────────────────────────
+let activeFilter='All';
+function renderCatalogue(){
+  const tabs = document.getElementById('filterTabs');
+  if(tabs && !tabs.children.length){
+    const cats=['All',...new Set(products.map(p=>p.cat))];
+    tabs.innerHTML=cats.map(c=>`<button class="ftab${c==='All'?' active':''}" onclick="setFilter('${c}',this)">${c}</button>`).join('');
+  }
+  filterProducts();
+}
+function setFilter(cat,btn){
+  activeFilter=cat;
+  document.querySelectorAll('.ftab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  // reset search when switching category
+  const si=document.getElementById('searchInput');
+  if(si) si.value='';
+  filterProducts();
+}
+function filterProducts(){
+  const q=(document.getElementById('searchInput')?.value||'').toLowerCase().trim();
+  const g=document.getElementById('catalogueGrid');
+  if(!g) return;
+  const filtered=products.filter(p=>{
+    const mc=activeFilter==='All'||p.cat===activeFilter;
+    const mq=!q||p.name.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q)||p.desc.toLowerCase().includes(q);
+    return mc&&mq;
+  });
+  const count=document.getElementById('catCount');
+  if(count) count.textContent=`${filtered.length} product${filtered.length!==1?'s':''}`;
+  if(!filtered.length){
+    g.innerHTML=`<div class="no-results">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <p>No products found. Try a different search or category.</p>
+    </div>`;
+  } else {
+    g.innerHTML=filtered.map(makeCard).join('');
+    initReveal();
+  }
+}
+
+// ── Page System ───────────────────────────────────────────────
+function showPage(p){
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  document.getElementById('page-'+p).classList.add('active');
+  const map={home:0,catalogue:1,about:2,contact:3};
+  document.querySelectorAll('.nav-link').forEach((l,i)=>l.classList.toggle('active',i===map[p]));
+  window.scrollTo({top:0,behavior:'instant'});
+  if(p==='catalogue') renderCatalogue();
+  setTimeout(initReveal,60);
+}
+
+// ── FAQ ────────────────────────────────────────────────────────
+function toggleFaq(btn){
+  const item=btn.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>{ i.classList.remove('open'); i.querySelector('.faq-q')?.setAttribute('aria-expanded','false'); });
+  if(!isOpen){ item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+}
+
+// ── Scroll Reveal ──────────────────────────────────────────────
+function initReveal(){
+  const els=document.querySelectorAll('.reveal:not(.visible)');
+  if(!els.length) return;
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+  els.forEach(el=>obs.observe(el));
+}
+
+// ── Mobile Menu ────────────────────────────────────────────────
+function toggleMobile(){
+  const m=document.getElementById('mobileMenu');
+  const btn=document.getElementById('hamBtn');
+  const open=m.classList.toggle('open');
+  btn.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+
+// ── Back to Top ────────────────────────────────────────────────
+window.addEventListener('scroll',()=>{
+  document.getElementById('backTop').classList.toggle('show',window.scrollY>400);
+},{ passive:true });
+
+// ── Contact Form ───────────────────────────────────────────────
+function submitContactForm(e){
+  e.preventDefault();
+  const confirm=document.getElementById('formConfirm');
+  confirm.classList.add('show');
+  e.target.reset();
+  setTimeout(()=>confirm.classList.remove('show'),5500);
+}
+
+// ── PDF Download ───────────────────────────────────────────────
+const PDF_B64='JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUgo+PgplbmRvYmoKMiAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjEgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGQgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YyIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNCAwIG9iago8PAovQ29udGVudHMgMTAgMCBSIC9NZWRpYUJveCBbIDAgMCA1OTUuMjc1NiA4NDEuODg5OCBdIC9QYXJlbnQgOSAwIFIgL1Jlc291cmNlcyA8PAovRm9udCAxIDAgUiAvUHJvY1NldCBbIC9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUkgXQo+PiAvUm90YXRlIDAgL1RyYW5zIDw8Cgo+PiAKICAvVHlwZSAvUGFnZQo+PgplbmRvYmoKNSAwIG9iago8PAovQ29udGVudHMgMTEgMCBSIC9NZWRpYUJveCBbIDAgMCA1OTUuMjc1NiA4NDEuODg5OCBdIC9QYXJlbnQgOSAwIFIgL1Jlc291cmNlcyA8PAovRm9udCAxIDAgUiAvUHJvY1NldCBbIC9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUkgXQo+PiAvUm90YXRlIDAgL1RyYW5zIDw8Cgo+PiAKICAvVHlwZSAvUGFnZQo+PgplbmRvYmoKNiAwIG9iago8PAovQ29udGVudHMgMTIgMCBSIC9NZWRpYUJveCBbIDAgMCA1OTUuMjc1NiA4NDEuODg5OCBdIC9QYXJlbnQgOSAwIFIgL1Jlc291cmNlcyA8PAovRm9udCAxIDAgUiAvUHJvY1NldCBbIC9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUkgXQo+PiAvUm90YXRlIDAgL1RyYW5zIDw8Cgo+PiAKICAvVHlwZSAvUGFnZQo+PgplbmRvYmoKNyAwIG9iago8PAovUGFnZU1vZGUgL1VzZU5vbmUgL1BhZ2VzIDkgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9BdXRob3IgKFdlc3Rlcm4gQ2FwZSBTdGF0aW9uZXJzKSAvQ3JlYXRpb25EYXRlIChEOjIwMjYwNDA0MTcxNzE2KzAwJzAwJykgL0NyZWF0b3IgKFwodW5zcGVjaWZpZWRcKSkgL0tleXdvcmRzICgpIC9Nb2REYXRlIChEOjIwMjYwNDA0MTcxNzE2KzAwJzAwJykgL1Byb2R1Y2VyIChSZXBvcnRMYWIgUERGIExpYnJhcnkgLSBcKG9wZW5zb3VyY2VcKSkgCiAgL1N1YmplY3QgKFwodW5zcGVjaWZpZWRcKSkgL1RpdGxlIChXZXN0ZXJuIENhcGUgU3RhdGlvbmVycyBcMjA1IENvbXBhbnkgUHJvZmlsZSkgL1RyYXBwZWQgL0ZhbHNlCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9Db3VudCAzIC9LaWRzIFsgNCAwIFIgNSAwIFIgNiAwIFIgXSAvVHlwZSAvUGFnZXMKPj4KZW5kb2JqCjEwIDAgb2JqCjw8Ci9GaWx0ZXIgWyAvQVNDSUk4NURlY29kZSAvRmxhdGVEZWNvZGUgXSAvTGVuZ3RoIDI1NDIKPj4Kc3RyZWFtCkdhdG08Z04pJlcoNEZlOW0kRGhMZUFgWHNKZ0MyN0BiOWo8Um5kLWtkbkZFRiFgUDMhUTU+Z15paE83USRmRklcQ3MkcHFHVG1JJ0k5RzNMQDA8I15yLE1KIWpAIz5VcVRqTGA+Z1JqaTRDQTM3NUxCKE5wQCFyY2RTaGtUbVJLVDlAX3QiJ2VaP1I3MEZTZzBHWFBHJC02YTw/TyFLVmI5SkVpJDQoRmROQDFaazRvIWYkYCJdNjk3cjZdTysxIWJkO2tbNkNaK3VlMkMtVi01ZzZvXlFoSWJvQTAuaS0uUSRSYz9sYGFfSS9TQmE8ZFxoUjJOPSplQj9bYUBmUSg4ZStIVnRvNCxJcXBBJig5dCtATmlnRUQ6XlI8N19vLTNJUiptKmhJWGxRQWxYL2JeVT5NWk1VPiwnSVBPN1FdZlQ/cUVyRS9kczNdQjpMUiYjJ29bJFU1Q0tHPE1uVi48SkxpUCR0P2dEVCxbP2klXGIvKDQ4SytQbGplUy9XTi1PMT9EcmtKPSIpbHFSTGM8dC1pLnFDS0w+QlQyLjhoM1FmLTolK0JKUmNvND9Ga25iMjh1V1ZPQz8mXDs1ZVM3YlM2dUZ0a2JpZVQiM3FHcHJrOiRRKy80SjBVSFRQRFY/RkBrTUJSQWNXKC8iZWomZiw1KXU/WFtmc2huUlgqMFJETTNwbFw9Iz1TNEhCUHQsNlhQU15KOydbOG9gW01aJVJXRGMrKkRnJzklUCdMYj02b24oUENNWmUmTjpPWmg8W0EnVCkzMEBsa2NORVpjU0IjcGBgLitFNUc3R1BdNU1UQFkvPUg/akxVSCRxajBaN11sOS5rYz8kaTwjdSQ3TD9SOzBqZmFoYWgnPC5QOmZlP1RXPkEzV3E6MmBQZ3FgKydeLFhdYGZ0RUFpPlpjZkAuImxKZ0c9XTRPaUJyK05fMCgwUHAndGFxUVQuVkIrNztEYCQraUQkUGw7PzwwJl8jKzJpXyNeWmRoRGQ3cFNWa0IrJlJGS3FjXUQhTTpGbW9JXVZxZ3NvSUBEPTUoWDdTSHQ9aC5oPy8lczxbSXV0ZFQ9b1E9JTFASFVoK0t0dCNAWSZxMCg0R3FMbiljaTQmNFc4XEdjODdlQFhpb11IV05QTTY3JEdVITFjWShoaW4hJiN1W2EyX0BbRCZfJCZzUjEsYXBnUUs4SW8nUENLWV48c29bNSg1NjpRZGplVDBQcy04YUUiSz07QWxCPkFpQF50cHJYUV0/bjU1YkJ1LzUnXUNlL2E6YjdXOFJjZDRZOSJwQjNxJSRkI1IuR28mQ1YtPylnVGNGVD5fWzcuQi09dE5hX0VbUiRZYDxSTjlTJExWOSpqbDAhTzo9ZEJNLEdSZERgLUQqYEMjM1w9JGJNOTNOZVpwTkVDS2QvZ25nUT1rR2luPCIocDAyNTxdZ3QjVFdfQGFaZDlHMjVSbGY4TGBvcD1QWGg7ZD40L1tFbSlAPC47V08/YlQ2J2Ymc2JNNE8rXTNKN2ldPGFTcyxXISMmTVxZPWI7bClPVWNOYltFWmBIajZjOnVeOWs2LHFLXTFjRmNMdSNeS1VlUFQ9Qy5fWnBMa0VSaVVQN0NaRSxcSipNUFI9M0FWRVMiUGUsXmA/LmlhUilXN00yUGA1XVZjYzhycUtpQG05YkhLUmVPI1dfPlguXzEtZ1ZQSlZvT3Q7YElCKWJhLzhZQWxEJ004IkFIJXBfLzJLXyhjOSRnUU5HL0M7KElLLjNKXF8hLDUxM1ZFRkNDSmtQNkRoU1wqTXJpQEB0KSlXbjZLaVE2bDU2WlVkWEApLXRkT1kyLGhYPitjWmRSSG0yQys6SWoyPm8jSz0rY1RtOTIrSlVRZS80YS88XjhMPVc0LyZKbkhAOT1KNmpNNXJMVz0jZmlCIlNYWVZrc1JeSSNdZSgiZipxQ25wKDwicm5SX144TyRBQTpHUWdyJCYzLjwrWG06SSVbaVJOOSluOFEzQz4uYFdKKmpLJkprKlJQM2lOVEBqYjFGbzg9VVtLc2o8KFwoQGwnbWYrKjYmdWtVKG9bRktHV0JUcEMzKUAzLUdgQVQ/JSVucVY7JlktdWo4Xz4xOUNZPDZYMjlDdUQhPiozSlUqV0lTY1duL143JVlzMyEqZ2QxT2MjUzFfPSxCS0g9YlljcVItUTFWNTIzTkNWSC0oVSJvb2MqNV8ycUg9b2MyK01dJzZjbSlyMzUyKFhsaidGbk8vJC9Ya3JeSC9jLlI7clgqcD4tVl1ebipRZVFNT0AtUSNcTDUpZzhnYFNkMFpaSTVjSGguaG1dTV0yLjRndDQ3Q287b0VIXSxBVHJgJD5EOC4tPEUoW1pKTlo5ZVpGIXItYD0icEpQXllDb1tOOUM4NEIpVjBsaihLMG0+SEtEJS9mPDcocG8iMi5zJi1oNVRgZj5lOiZuVCspcHEpZUFoNGFxTCNfSD0pMWI7Wm1rPCUiYjF0InJbOCZeJiJFXCg8ODJLc0shKFUubjU7SChfaz9nMEVMODBGJW01ajU4S0BbOEFXM1oyWSYkZ2BaSmcoKUhkLD44QlZnYDpIPyEqVF9MSSZQcUA7JUVMImBiNVw5YDckVFFvMlNiWjEoT0AkLkFHX0tVbyxGZC1ybjBdXTNobj4tckRGKkZCQSMoXzdKMCRKSSw0VionbS5NPWppM0JsVG9Ca1pySyRKWUY1am9wT3RXVkdvPlVBb28rP2giKmFAZys6UGgoKWw7OzJwSCZnVSo1Wj9WJDAzY2xAZjwjR247NyVSVlktYF49RzU2YD5aLSw+Z1EzYTlPV0VdYTxcTCJlbXIrTVtpVSJgUiY6NmdZNWVeXl9yM0dmW1tnQzp0Pz8rQE1STylmaCoic2xKJDtbNjczIydwJEREOnFLcSxVKD4idU9RQWcxPTUjaGc+N0I9dXMmJ1tZOGQja2o5WWFoPjVgbyY9VWFyM0hkOW5KPTRfVm1TM0EpaygxajhNZTFQcDE+RG9EWzI7KktHYU5SUWVkWm1pTk8mXC11Lkw3IWohTkBfbEh0bCg8Ky5pKylSOWJXayhSJzxvKWlbdVVRUmNUNWlZVC5BIkxNYTtSZSJbX0gvRmEnZShpRE1bQGFOaGZtaENNQjQvJT1KV1YoKGYkIzRDZVs8bzNSMElzXDo9XW9bQCkrP3BuTGYrM1FYal1VMmRnMlg5OmZiUkVyXy5hNElcTm8zSjJpPFhTYF9YWCU0RzFaX2xGNjU0JWohO0RvNEpjQV5mLykkOGsyIkhiJWBqYWhhX2VAa01XTldKIilbbFZlVmlqO19YPFlwVjxQSF5gLl5CMFo/Ky9JbCsuYmItNDdaRUZuI0U8cidDTmhOJTxFXT42X2UrM2pjcSVVanQlfj5lbmRzdHJlYW0KZW5kb2JqCjExIDAgb2JqCjw8Ci9GaWx0ZXIgWyAvQVNDSUk4NURlY29kZSAvRmxhdGVEZWNvZGUgXSAvTGVuZ3RoIDI1NzkKPj4Kc3RyZWFtCkdhdG09PkJBT1coNFEiXTMlcGJAXS9FJC4iPj4xLGEpVGtpRUxQRC4xcFx1YEpMIWNROWJJaypnOGZfXCVocVQ0WjZcMTFnPmU4O0o6aHBXRiU4PzVuYHIoNGM4KSspJzcwXGI3aW5HSUsiU2wqQlE/YSlQSSdeak5tJDYoLUhHXiZgXTYmXCk0S1lpTmlmUzAqOUlHO25VcnRUaVpcLFMnPzhmOmFAS000R1FzPytgVGxSYzdeOGVOLHFYQ2lvaWIsZU5BNkdoNjVOOU0zcl5cUTh0KTlRNzNVcDAmc15uVTIhIzYpcTMqLWlbTm1FZUhcQHE0TT9EYFwtWiNFW2s9JFA0M1UrZnRQMGFNJShASWM+WGc6QFRDXGhONDZEXF5BUUJPUldZaW1ASHJQOjh1LDQnJ2xFIUooQU5lXGlgJ1JGWUFraSolVkZXZS1KOCFhJV43dCYvc2s+ISJDNHVEOmZTMSEvQjwvQThuMEhwai9xQlZwblYpcDlrKE5kLF03NldCaFZTbClQWi5WIl46SDpqQChqO0N1ZTswQzQqKms0ITdhLVNeUWBkQWdsTl8oIlpZbi9UPVtXanNKM2c2T1VBT2wvZWA4KGJfVDY7ayhGSlBNWi84dFVTTD5ZJnIvYFhqK0gpUz4jbjQjKkQoV1tNI1whZWBpPmRTcyNyLFdZT3F0Si8tNVwiUWBcSSgxW3R0UFFAQmVHRzJRKEY5cD4hWnA9YDtxNT5GPW80JTUvNF9HU2wyaW8jKF1lalMwPCRtLVJwYnJaWywlNzVUYTM/VTw+UktRZjxGOyY3I0pSRVIyMCRiRnFHLS4zOW1vOGlIPlZSaiI8NCpWMkhvLS9GUlJmcShkOjNkTTJfKGNGLmVXMjJoWE8mV3MmXE9ecl5oOTZdU0gvaEo6PiheTVM5Oj5wM3EpSFk6JS48O0BcSUQ8aU9VRjgtLVA9PlxGPlcjITRaKFtnP1BHV0s5dE89bGZfLU0xOmtpM1deS1VTbDxNUzUrWVsqN0xqcTZCcGtUJE8nWTJBUTpdaiRqVldYcz9YRmdLMW4nPGYuK29GYXQ1ImNYLC8uJCxkVjdVKlsqMXJoViNhZkpBMzJMdExraFhbOW1nJmZ1XURMRk81QF9ba29rXDhtRlZBKjYuYSQzKiNRNmpEZ09Oc01dRCRMPnBIPy8kVVZfWy1iWFNjJGAnIWBGbUtYUF1AR0VMcU9YNTMuZXNaYlhGOVxlJTQtLG9gWk8tbj5hZV5ubmdnRyheSydEdU4lZkVIIzo/XFgzNCV1LygjJzRZbV8iLyxeNFsoIicnO0BXUykyKTU4cVBrQmxSNmI0bnFwZzcnSyEsRUZdSHJNYCE7KGYyJSVXJktkXltAMUZtVlZxMCppMFBHXi8tWSUqXS8vQDBfaGNoN3FwP2Y9Ryk1WzZbVlVnPUJaTlcvU0hdYTZwN1deZV9vOW8yXGxeZ0NHK21sUEktIVxSYWtVa2ZUZz9FZEwpLlNhKmZMcVJsZSduYjJwKG5HXGw/YmFaNmliNnUwVC0/PlRJMTE7NSM1aEprJyU0UFVbLmhsXihhUjVzL1dmJEFBLV0zNSVDaSlSXW9yLiQqbCghWGRpTD8+X2thV245IzQ0JERJPWRZIixkLmxcVS9NR0RhMypcXjkoQkYqU0NeOk9kbz1PNEAlMyhjUFZhK0orTEZEIUEuXGx1JT5IQms6OHBcMFVLP1wtUjFBL0VYJkEkZTNDPV5gWWZOdFM4by1zbD9FS1AkWT5ocUpuS2I+b2JoXDM2QUZGX19AOlpwUzc2akg1SDRFXnVLS1ohZ1ojS1xkPzxUbS1fTWErOVYvIUE8O2REOV0pN2NoSSFBKCdcRUlWMC4mSEw8WV5xTmE8MC8kODNPSGNhOlR1IilQN1RWKWdfMy44ajQlSl5XQzVyTyFidVFVP0BEL1RbbD5vaWA6JF9IMSZHaVRWTCxOIUBkWmtpZU9TQ2EwRjFecFwhWl9uPz9sZEkhZTRoJzslT05sRTtlPTwqWFwiZjZUVkhgZypNUDkwK0Q+alIqPG0sQShdOGRJbkVVRSlFMj5HaWxmSVInI2VOQ0QqUFVXSWA6Vl4xQj8+XSc1VWBcKFVpRjFYZilcWU1yRUoiX0AuL2xvJWosXCxJVlBbYl48cGFaOCZZOnNiM0ZvbSI8RDQ3Vm1eXCNOMVNRaDJTRFBRUSQocGVLJF5nLGtTcC5eQmlBXHRMXkBRdGdCT3EuaztGPF5xUE50NkYhclchYVEvT0MjOyhDI0dYJSYqJ0UyWDRNLFtmMUlgZ1ZsKyk4X189ZElBZm42R10wWytIcVtjLWdNPWVfZyo+ZWFtNmVvN0I1bCElSj9LJztCVTdhLzBSZ186Ol9bPFpoc0NARGQwIyRZNS1QcilDbnJATHUjaEA6MzpwIkpVYVhXVD9sQUNcKTBFSSJsKmVFRVohOTRlZD9aMTAlZHU7X1ZOIUQ3cmozVSZPNSdvPTleTSRGKlQyWzwzWUYmK1khJUsvYmZzTDd1TXUicEk0MiV1JV5KR3BDZnAqOkQzPzYvQU1ILmBhQ3JCZE8wQTxPUmE5XFJVT1RMOygmXypFKm9QQDBRQEdbZENTaEQiRmdDaktKaXEvVCRIIi9KWGEtPV5GOmNdUWpyIS9mdFQxSE4+RmQvMEkyYiRzOmZBY1okQl9bNlkxT0FASzkwRmNQZyNjcFBVMy5EbFFMUi9tN1tXI2Y6UTszbDBoXE0+UW5kYCwqRXJBU1ZZQ1xVSVJCQ0ojbGYlW1A8MWZtVCE/Zk1ZKlhuJGA5SjVGY3VsK0pwNzhDYyU+Xk0zJT9rMjBzLkI7N3ErKlNhXCVrdG9lVzNyUmNvJTJsJEdbbUE0UiZYYyNkZU1XM1U4WlZxbytpVCc7N1ZtdT4zQ0I0M28/MGgjMkxaKT5UdEBsLTQtaCovTXUqXDgmI0AnOiFvLC1AaiZPakFjNz1JM25LJEZCK009XmVBQl0sM3JxUSNIVUAxS0lfTDc9JCFWc0YjT2tdMWYtaDlTZlw+Ij5EQkN0IVNkJm5EM1oxZzBfb0FFJ0twLmsvUlAuKjxEXVlDZSI8QWlpIUk2SChbYD06ZXRYOCpfXXFNQDgncTJRUWdmSConJDdGYzBsTz4hJVFqSEQvZjQ7JXVbUjhFLmsoclU/LzdaS2ZTbmlsdF5cKksjIW5eaiYpYixfN109bTQzTzhhKmtickRSMiVfKzgmN0VBYUhJbD4xZTNWUE9zdVhWXlpOJUssXkY8cFgwUk8hSjE9QTJmNUFiPGg1M2dZREg6Mkhea1NYWGVmKmlPPzIjXVpDPW89TD51OkcuKmxiaFRnOVAjPjonZ1o4JGhnS2ppbSdIR15WWlxkOURkLVs7az4+TU1xaERpOzpFa2JcT08icyJNTCg3PERIIW5AWV1uR34+ZW5kc3RyZWFtCmVuZG9iagoxMiAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCA3OTIKPj4Kc3RyZWFtCkdhczFcYkF1JmMnXSYoKm1dcidWOEAiaGdCS0xuV2JnPWosMmYtdTNCYWhIM3FFWktZY11yIlBCa1A0Jj5QQ2JRNScxbmJKYDRlbXMvI2stYjJMNk4lVTs5NSIicFIrciUkUmBqRz9eMVInVCYnQXFYJklgVFhha1VySDZTIjtPVEs6ZWprclBfUkNaRCYmOF0jMiNJWzlTa0VzYHJaPFliKV9XNTRqTlZ0UDluUmJIKUROSC5RRyROPnAlYz1ZJ2d1QVk0bT5WbGQwaEQrVERXQHEzMyhHclsnQGJgbGE1QmVeSjFsMmQvcUhiVmM2RzwsLys2Zj1bLERqNkhlcERyW3VLX2F1SEZFOjtGJ0ZdaiQwZUMlYVNgIS87c0pRJVJULVBpImNQXCtUOz0jNVwzcEVrJCQoWTJBYzwvT2woMUhaT2lQXUhcT1g4ci80ZyZPWUpodSNoaUAzLDtpIm1cUD9sWVFrYyo/ckRkKG1XLykpTjwnaSVPck4nXkZxJlRMVz1pL1wlX2VUTFZBYDsycjJEZSMvKGZXTXVZPHI8MDwpYXFUITFIJllxPFkwV2xFWEBJK2FFMWlHZWpXaCRwVyhwcGVxLihrJjJCNm1sU3JFNSxANio7KUwpRURtcCpAN2YlJj89WlZVaVJKOEZmOCsjRTNyWVZqJTdrYEpob3IpN0FPcVE9c1E4QS0nOHNJQCFxVUJjKSlkWyJpaS5fMTgvLEQoLCQ+Mmk5XFEnSSpAZ2g9RERAcS91OyU0NnBocmZrWnIvPDcjblxtT1lXMU9PK3MzLGBHRGQ/Z1E0Uy8zWmhNQjdBWy0rJFRTaCUxYyRPTHJeUGxBKTVJUi0xTD81VGlyLi9jY0hjITpucEQ/UDlBbmNDTGRySmZUSUdOXiFjMj8lcWI3U2cjQ2Qna3BOdGVBUVZAUmVLaSVUPktdZillX11dTEExaTsiWCNZalFAMkg2Qzwzc3RdXytfP006Pm5jUGsmYXNAUFNGJ2NpcS9RWC0rMCklQ2dRcltSXjhnR0AiK0AjQT42PGs9ViEwKCl+PmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA2MSAwMDAwMCBuIAowMDAwMDAwMTAyIDAwMDAwIG4gCjAwMDAwMDAyMDkgMDAwMDAgbiAKMDAwMDAwMDMyMSAwMDAwMCBuIAowMDAwMDAwNTI1IDAwMDAwIG4gCjAwMDAwMDA3MjkgMDAwMDAgbiAKMDAwMDAwMDkzMyAwMDAwMCBuIAowMDAwMDAxMDAxIDAwMDAwIG4gCjAwMDAwMDEzMjIgMDAwMDAgbiAKMDAwMDAwMTM5MyAwMDAwMCBuIAowMDAwMDA0MDI3IDAwMDAwIG4gCjAwMDAwMDY2OTggMDAwMDAgbiAKdHJhaWxlcgo8PAovSUQgCls8ZTRlOTVkYTA5OThjMjA1ODdiMjFkOTkwMjM4NDEzZmI+PGU0ZTk1ZGEwOTk4YzIwNTg3YjIxZDk5MDIzODQxM2ZiPl0KJSBSZXBvcnRMYWIgZ2VuZXJhdGVkIFBERiBkb2N1bWVudCAtLSBkaWdlc3QgKG9wZW5zb3VyY2UpCgovSW5mbyA4IDAgUgovUm9vdCA3IDAgUgovU2l6ZSAxMwo+PgpzdGFydHhyZWYKNzU4MQolJUVPRgo=';
+function downloadPDF(){
+  try{
+    const bytes=atob(PDF_B64);
+    const ab=new ArrayBuffer(bytes.length);
+    const view=new Uint8Array(ab);
+    for(let i=0;i<bytes.length;i++) view[i]=bytes.charCodeAt(i);
+    const blob=new Blob([ab],{type:'application/pdf'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');
+    a.href=url;
+    a.download='Western-Cape-Stationers-Company-Profile.pdf';
+    a.click();
+    setTimeout(()=>URL.revokeObjectURL(url),10000);
+    showToast('Company Profile downloading…');
+  } catch(err){
+    showToast('Download error — please contact us directly.');
+  }
+}
+
+// ── Init ───────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded',()=>{
+  renderFeatured();
+  initReveal();
+});
+</script>
+</body>
+</html>
